@@ -7,6 +7,7 @@
   <title>AwakenHuman – Rise of Reason</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-pap7IQuXcc6SWzCtAnVZMj8cQQoW+xXM0mpiwxDLJipnBZTjvYbdCDv5WzQCFwqubn8nJPLBL9TkfKn2eMRA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     * {
       box-sizing: border-box;
@@ -48,6 +49,7 @@
       text-align: center;
     }
     .cta button, .donate button {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2); border-radius: 12px;
       padding: 14px 30px;
       font-size: 16px;
       background-color: #4e54c8;
@@ -92,8 +94,9 @@
   </style>
 </head>
 <body>
+<main role="main">
   <header data-aos="fade-down">
-    <h1>AwakenHuman</h1>
+    <h1><i class="fas fa-brain"></i> AwakenHuman</h1>
     <nav>
       <a href="#about">About</a>
       <a href="#roadmap">Roadmap</a>
@@ -136,13 +139,13 @@
   </div>
 
   <div class="donate" id="donate" data-aos="fade-up">
-    <h2>Support the Mission</h2>
+    <h2><i class="fas fa-hand-holding-heart"></i> Support the Mission</h2>
     <p>Your donation helps us reach more minds with facts, clarity, and purpose.</p>
     <button onclick="window.location.href='https://your-donation-link.com'">Donate Now</button>
   </div>
 
   <footer id="contact" data-aos="fade-up">
-    <h3>Contact Us</h3>
+    <h3><i class="fas fa-envelope"></i> Contact Us</h3>
     <form action="mailto:awaken@humanity.org" method="POST" enctype="text/plain">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
@@ -160,5 +163,6 @@
       once: true
     });
   </script>
+</main>
 </body>
 </html>
