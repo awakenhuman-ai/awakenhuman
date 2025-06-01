@@ -5,78 +5,94 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AwakenHuman – Rise of Reason</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f4;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f7fa;
       color: #333;
       margin: 0;
       padding: 0;
+      scroll-behavior: smooth;
     }
     header {
       background: #111;
       color: white;
-      padding: 20px;
+      padding: 30px;
       text-align: center;
     }
     nav a {
-      color: white;
+      color: #ddd;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #fff;
     }
     .hero {
-      padding: 60px 20px;
-      background: linear-gradient(to left, #4e54c8, #8f94fb);
+      padding: 80px 20px;
+      background: linear-gradient(to right, #4e54c8, #8f94fb);
       color: white;
       text-align: center;
     }
     section, .cta, .donate {
-      padding: 40px 20px;
-      max-width: 800px;
+      padding: 50px 20px;
+      max-width: 850px;
       margin: auto;
       text-align: center;
     }
     .cta button, .donate button {
-      padding: 12px 25px;
+      padding: 14px 30px;
       font-size: 16px;
-      background-color: #111;
+      background-color: #4e54c8;
       color: white;
       border: none;
+      border-radius: 8px;
       cursor: pointer;
-      border-radius: 6px;
-      transition: background-color 0.3s ease;
+      transition: transform 0.3s, background-color 0.3s;
     }
     .cta button:hover, .donate button:hover {
-      background-color: #444;
+      background-color: #6c70f2;
+      transform: scale(1.05);
     }
     .step-list {
       text-align: left;
       margin-top: 20px;
     }
     .step-list li {
-      margin: 10px 0;
+      margin: 12px 0;
       line-height: 1.6;
     }
     footer {
       background-color: #222;
       color: #ccc;
-      padding: 20px;
+      padding: 30px 20px;
       text-align: center;
       font-size: 14px;
     }
     form input, form textarea {
       width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 4px;
+      padding: 12px;
+      margin: 12px 0;
+      border-radius: 6px;
       border: 1px solid #ccc;
       font-size: 16px;
+    }
+    .quote {
+      font-style: italic;
+      margin-top: 50px;
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <header>
+  <header data-aos="fade-down">
     <h1>AwakenHuman</h1>
     <nav>
       <a href="#about">About</a>
@@ -87,17 +103,17 @@
     </nav>
   </header>
 
-  <div class="hero">
+  <div class="hero" data-aos="zoom-in">
     <h1>Awaken Humanity, Liberate the World</h1>
     <p>Through critical thinking, compassion, and science, we elevate the human spirit beyond fear and superstition.</p>
   </div>
 
-  <section id="about">
+  <section id="about" data-aos="fade-up">
     <h2>About the Campaign</h2>
     <p>We believe in human potential. This campaign aims to foster global progress by awakening minds, spreading reason, and reducing ignorance-based violence and dogma.</p>
   </section>
 
-  <section id="roadmap">
+  <section id="roadmap" data-aos="fade-up">
     <h2>The 100-Step Roadmap</h2>
     <p>Explore selected highlights from our roadmap to awaken global society intelligently:</p>
     <ul class="step-list">
@@ -109,23 +125,23 @@
     </ul>
   </section>
 
-  <section id="join">
+  <section id="join" data-aos="fade-up">
     <h2>Join the Movement</h2>
     <p>We welcome thinkers, creators, educators, and innovators. Together we can awaken humanity intelligently.</p>
   </section>
 
-  <div class="cta">
+  <div class="cta" data-aos="fade-up">
     <h2>Get Involved</h2>
     <button onclick="window.location.href='https://forms.gle/yourformlink'">Sign Up as a Volunteer</button>
   </div>
 
-  <div class="donate" id="donate">
+  <div class="donate" id="donate" data-aos="fade-up">
     <h2>Support the Mission</h2>
     <p>Your donation helps us reach more minds with facts, clarity, and purpose.</p>
     <button onclick="window.location.href='https://your-donation-link.com'">Donate Now</button>
   </div>
 
-  <footer id="contact">
+  <footer id="contact" data-aos="fade-up">
     <h3>Contact Us</h3>
     <form action="mailto:awaken@humanity.org" method="POST" enctype="text/plain">
       <input type="text" name="name" placeholder="Your Name" required>
@@ -133,7 +149,16 @@
       <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
       <button type="submit">Send Message</button>
     </form>
+    <p class="quote">“You are the light that awakens others. One mind at a time.”</p>
     <p>© 2025 AwakenHuman – All rights reserved</p>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>
